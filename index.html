@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <div id="tip-calculator">
+        <div id="calculator-body">
+       <div id="left-container">
+          <form>
+            <label for="amount">Bill</label>
+            <input type="number" name="amount" placeholder="$" id="amount" onchange="billAmount()"/>
+            <label for="tip">select tip %</label>
+            <div id="row-1">
+              <button onclick="tipPercent1()">5%</button>
+              <button onclick="tipPercent2()">10%</button>
+              <button onclick="tipPercent3()">15%</button>
+            </div>
+            <div id="row-2">
+                <button onclick="tipPercent4()">25%</button>
+                <button onclick="tipPercent5()">50%</button>
+                <button>custom</button>  
+            </div>
+            <label id="people" for="count">Number of people</label>
+            <input type="number" id="count" placeholder="0" name="count" />
+          </form>
+       </div>
+       <div id="right-container">
+        <div id="top">
+            <div id="tip-amount">
+                <div>
+                    <h2 id="tip">Tip Amount</h2>
+                    <p>/ person</p>
+                </div>
+                <div>
+                    <h2 id="display-tip">$0</h2>
+                </div>
+            </div>
+            <div id="bill-amount">
+                <div>
+                    <h2>Bill Amount</h2>
+                    <p>/ person</p>
+                </div>
+                <div>
+                    <h2 id="display-bill">$0</h2>
+                </div>
+            </div>
+
+        </div>
+        <div id="bottom">
+            <button onclick="reset()">Reset</button>
+        </div>
+
+       </div>
+    </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
